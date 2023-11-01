@@ -1,30 +1,15 @@
-import random 
+import random
 
-
-
-
-nb_eleve = int(input("saisir une taille de  liste paire : "))
-
-
-
-while nb_eleve % 2 != 0 or nb_eleve <= 0 :
-    nb_eleve =int(input("veuillez svp saisir une taille de liste paire est positive : "))
-
-
-
-liste = []
+liste = ["Docteur_D","cap","ibucap","BID","jeChangeDeCap","Outsider",]
 
 liste1 = []
 liste2 = []
 
-for i in range(nb_eleve) :
-    element = input(f"rentrer le nom de l'éléve {i+1}: ")
-    liste.append(element)
+liste = random.sample(liste,len(liste))
 
-liste1 = random.sample(liste[:int(nb_eleve/2)],int(nb_eleve/2))
+liste1 = liste[:int(len(liste)/2)]
 
-liste2 = random.sample(liste[int(nb_eleve/2):],int(nb_eleve/2))
-    
+liste2 = liste[int(len(liste)/2):]
+
 print(liste1)
-print(liste2)       
-
+print(liste2)
